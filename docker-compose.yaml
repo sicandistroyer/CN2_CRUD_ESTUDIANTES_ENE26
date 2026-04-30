@@ -7,6 +7,8 @@ services:
       - 5010:5000
     environment:
       DATABASE_URL: postgresql://postgres:admin1234@db_stack_db/cetech
+    networks:
+      - red_swarm
     
 networks:
   red_swarm:
