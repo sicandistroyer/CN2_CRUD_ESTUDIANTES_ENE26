@@ -10,5 +10,4 @@ services:
     
 networks:
   red_swarm:
-    driver: overlay
     external: true
