@@ -1,0 +1,14 @@
+services:
+  app:
+    image: devtecnm/crud_estudiantes:latest
+    deploy:
+      replicas: 2
+    ports:
+      - 5010:5000
+    environment:
+      DATABASE_URL: postgresql://postgres:admin1234@db_stack_db/cetech
+    
+networks:
+  red_swarm:
+    driver: overlay
+    external: true
